@@ -29,10 +29,10 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      flash[:success] = 'Task は正常に作成されました'
+      flash[:success] = 'Task は正常に更新されました'
       redirect_to @task
     else
-      flash.now[:danger] = 'Task は作成されませんでした'
+      flash.now[:danger] = 'Task は更新されませんでした'
       render :edit
     end
   end
@@ -46,7 +46,7 @@ class TasksController < ApplicationController
 
   private
   
-  def set_message
+  def set_task
     @task = Task.find(params[:id])
   end
 
