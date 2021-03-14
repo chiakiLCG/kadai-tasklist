@@ -12,7 +12,7 @@
     <tbody>
       <% @tasks.each do |task| %>
         <tr>
-          <td><%= link_to task.id, task %></td>
+          <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
           <td><%= task.status %></td>
           <td><%= task.content %></td>
         </tr>
@@ -23,5 +23,3 @@
     <%= paginate @tasks %>
   </div>
 <% end %>
-
-<%= link_to '新規タスクの作成', new_task_path, class: "btn btn-primary" %>
